@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace ejer012
 {
-    public class Class1
+    //ejemplo de patron Singleton
+    public class CafeteraSingleton
     {
+        private static CafeteraSingleton instance;
+
+        private CafeteraSingleton()
+        {
+
+        }
+
+        public static CafeteraSingleton GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new CafeteraSingleton();
+            }
+            return instance;
+        }
+            
+
     }
 }
